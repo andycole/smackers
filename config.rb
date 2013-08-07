@@ -2,6 +2,10 @@
 # This compass config file will allow you to
 # quickly dive right in.
 
+# Sassy buttons - http://jaredhardy.com/sassy-buttons/
+require 'sassy-buttons'
+
+
 #########
 # 1. Set this to the root of your project when deployed:
 http_path = "/"
