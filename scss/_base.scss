@@ -1,9 +1,43 @@
-//
-// Base
-// --------------------------------------------------
-
 @import "__variables";
-
+@import "__reset";
 @import "__mixins";
 
-@import "__reset";
+//@import "modules/icons";
+
+// Typography
+// -------------------------
+body {
+    font: 0.875em $sansFontFamily;
+    line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $sansLargeFontFamily;
+}
+h1,
+h2 {
+    letter-spacing: -0.04em;
+}
+blockquote {
+    border-left: 5px solid #eee;
+    padding: 5px 10px;
+    line-height: 1.45em;
+    margin: 15px 0 15px 15px;
+    color: #767676;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: $sansFontFamily;
+}

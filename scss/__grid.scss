@@ -1,0 +1,52 @@
+/////////////////
+// Semantic.gs // for SCSS: http://sass-lang.com/
+/////////////////
+
+// Defaults which you can freely override
+$column-width: 20px;
+$gutter-width: 15px;
+$columns: 32;
+$outer-margins: false;
+
+// Utility function — you should never need to modify this
+@function gridsystem-width($columns:$columns) {
+  @return ($column-width * $columns) + ($gutter-width * $columns) - if($outer-margins, 0, $gutter-width);
+}
+
+// Set $total-width to 100% for a fluid layout
+$total-width: gridsystem-width($columns);
+
+//////////
+// GRID //
+//////////
+
+body {
+  width: 100%;
+  text-align: center;
+  @include clearfix();
+}
+
+@mixin row($columns:$columns) {
+  display: block;
+  width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
+  margin-right: $gutter-width;
+  @include clearfix();
+}
+
+@mixin column($x, $lastcolumn:false, $columns:$columns) {
+  display: inline;
+  float: left;
+  width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
+   @if $lastcolumn {
+        margin-right: 0;
+   } @else {
+        margin-right: $gutter-width;
+   }
+}
+
+@mixin push($offset:1) {
+  margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+@mixin pull($offset:1) {
+  margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}

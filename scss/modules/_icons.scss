@@ -1,0 +1,36 @@
+/*!
+ *
+ *  Project:  Web Icons
+ *  Author:   Andy Cole - Pro-G Media
+ *
+ */
+
+/*Base style must be included first */
+@import "spliticons/base";
+
+// Font packs
+// Include libaries as desired
+@import "spliticons/icons-web";
+
+@import "spliticons/icons-webextended";
+@import "spliticons/icons-gamingsport";
+@import "spliticons/icons-commerce";
+@import "spliticons/icons-social";
+
+//@import "spliticons/icons-travel";
+//@import "spliticons/icons-audio";
+//@import "spliticons/icons-food";
+//@import "spliticons/icons-devices";
+//@import "spliticons/icons-editor";
+//@import "spliticons/icons-misc";
+
+
+/********** LEGACY ICONS **********/
+.icon16 {
+    background-image: url("../images/sprites/icons16x16.png");
+    background-repeat: no-repeat;
+}
+.icon13 {
+    background-image: url("../images/sprites/icons13x13.png");
+    background-repeat: no-repeat;
+}

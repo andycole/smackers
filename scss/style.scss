@@ -1,11 +1,18 @@
-//
-// Style
-// --------------------------------------------------
+/*!
+ *
+ *  Project:  Shared Common (Sassy Version) - still loaded with shit but getting there!
+ *  Author:   Andy Cole - Pro-G Media
+ *
+ */
 
+// BASE
 @import "_base";
 
+//LAYOUT
 @import "_layout";
 
+// MODULES
 @import "_modules";
 
+//STATES
 @import "_states";

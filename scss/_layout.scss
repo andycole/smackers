@@ -1,0 +1,69 @@
+@import "__grid";
+
+#content {
+    background: #ddd;
+    margin-bottom: 0px;
+}
+
+.container {
+    max-width: $total-width + 20px;
+    min-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    text-align: left;
+}
+
+
+//Fixed width layout
+//--------------------
+.l-maxwidth {
+
+    // 2-column Layout
+    &.l-2column-sidebar {
+        #main {
+            @include column( $columns - 9 );
+        }
+        #sidebar {
+            @include column(9, true);
+        }
+    }
+
+
+    // 2-column Layout with slim sidebar
+    &.l-2column-sidebar-slim {
+        #main {
+            @include column( $columns - 5 );
+        }
+        #sidebar {
+            @include column(5, true);
+        }
+    }
+
+
+    // 3-column Layout with 2 sidebars
+    &.l-3column-2sidebar {
+        #main {
+            @include column( $columns - 5 - 5 );
+        }
+        #sidebar {
+            @include column(5, true);
+        }
+        #aside {
+            @include column(5, true);
+        }
+    }
+
+}
+
+/*
+.l-fluid {
+
+}
+.l-fixed {
+
+}
+.l-responsive {
+
+}
+*/

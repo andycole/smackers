@@ -1,0 +1,31 @@
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+  *zoom:1;
+  &:before,
+  &:after {
+      content:"";
+      display:table;
+  }
+  &:after {
+      clear:both;
+  }
+}
+
+//Simple CSS3 Mixins
+@mixin box_shadow($horizontal, $vertical, $spread, $color) {
+  -webkit-box-shadow: $horizontal $vertical $spread $color; // Safari < 5.0, Chrome < 9.0
+  box-shadow: $horizontal $vertical $spread $color; //W3C
+}
+
+@mixin linear_gradient($from, $to) {
+  background-color: $from; // fallback to solid color
+  background-image: -webkit-linear-gradient($from, $to); // Safari, Chrome < 25.0
+  background-image: -moz-linear-gradient($from, $to); // Firefox < 16.0
+  background-image: linear-gradient($from, $to); //W3C
+}
+
+@mixin transition($property, $duration, $easing) {
+  -webkit-transition: $property $duration $easing; // Safari, Chrome < 26.0
+  -moz-transition: $property $duration $easing; //Firefox < 19.0
+  transition: $property $duration $easing; //W3C
+}

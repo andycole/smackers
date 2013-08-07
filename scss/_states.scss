@@ -1,0 +1,63 @@
+/***** Floats and clears *********/
+
+.clearboth {
+    clear: both;
+}
+.clearleft {
+    clear: left;
+}
+.clearright {
+    clear: left;
+}
+
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+
+.alignLeft {
+    text-align: left;
+}
+.alignCenter {
+    text-align: center;
+}
+.alignRight {
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Clearfix */
+
+.clrfix:before,
+.clrfix:after {
+    content: "";
+    display: table;
+}
+.clrfix:after {
+    clear: both;
+}
+.clrfix {
+    zoom: 1;
+}
+
+/*********** Remove all margins  ************/
+.nomargin {
+    margin: 0;
+}
+
+/*********** Basic HR substitute  ************/
+.hr {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+/*********** Remove text wrap ************/
+.nowrap {
+    white-space: nowrap;
+    display: inline-block;
+}
